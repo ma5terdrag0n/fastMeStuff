@@ -7,4 +7,4 @@ This repository contains my implementations of :
       2. Add two Bignums : multiply(b1, b2, sum, sizeOfSum);
       Product and sum contains the final answer after multiplication and addition respectively.
       
-      sizeofProduct/sum is just a var which is always passed by reference and is equal to size of final array(product[] or sum[])
+      sizeofProduct/sum is just a var which is always passed by reference and is equal to size of final array(product[] or sum[]).
