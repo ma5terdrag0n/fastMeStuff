@@ -58,14 +58,14 @@ void solve(){
   ll deg[n+1] = {0};
   for(int i = 0 ; i < m ; i ++){
     ll u, v;
-    cin >> u >> v;
-    deg[u]++;
-    adj[v].pb(u);
+    cin >> u >> v;      // edge is from u -> v
+    adj[v].pb(u);       // Reverse The Graph  i.e. v -> u
+    deg[u]++;           // Calculate Indegree of each node
   }
   priority_queue<ll> pq;
   for(int i = 1 ; i <= n ; i ++){
     if(!deg[i]){
-      pq.push(i);
+      pq.push(i);       // Add nodes with Indegree 0
     }
   }
 
@@ -73,13 +73,11 @@ void solve(){
   ll ans[n+1] = {0};
   while(!pq.empty()){
     ll u = pq.top();
-    // cout << u << endl;
     pq.pop();
-    ans[u] = counter--;
+    ans[u] = counter--; // labelling of each vertex
     for(int i = 0 ; i < adj[u].size() ; i ++){
       ll v = adj[u][i];
       deg[v]--;
-      // cout << v << " " << deg[v] << endl;
       if(!deg[v]){
         pq.push(v);
       }
@@ -94,8 +92,6 @@ void solve(){
 
 int main(int argc, char *argv[]){
     std::ios::sync_with_stdio(0);
-    // freopen("input.in" , "r" , stdin);
-    // freopen("output.out" , "w" , stdout);
     solve();
 }
  
