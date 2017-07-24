@@ -1,5 +1,5 @@
 <pre>
-<b>fastMeStuff</b>
+fastMeStuff
 ├── Bignum
 │   └── bignum.cpp
 ├── GraphTheory
@@ -7,7 +7,7 @@
 │   ├── krushkal.cpp
 │   ├── topologicalLabelling.cpp
 │   └── topologicalSort.cpp
-└── README.md
-
-2 directories, 6 files
+├── README.md
+└── Segment Tree
+    └── rangeSumQueryWithLazy.cpp
 </pre>
